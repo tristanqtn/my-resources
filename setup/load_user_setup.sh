@@ -8,7 +8,6 @@ set -e
 # Exegol also features a set of supported customization a user can make.
 # The /opt/supported_setups.md file lists the supported configurations that can be made easily.
 
-# Set TMUX configuration
 cat <<EOF > /root/.tmux.conf
 set-option -g default-shell /bin/zsh
 # List of plugins
@@ -47,3 +46,5 @@ xhost local:
 
 # Perform a system update
 sudo apt update
+
+mkdir -p /workspace/{outputs,downloads,uploads}
