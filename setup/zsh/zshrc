@@ -2,3 +2,38 @@
 # This file is sourced in /root/.zshrc file.
 # Alternatively, the /opt/my-resources/setup/load_user_setup.sh file can be used to operate the change once (instead of sourcing a file for each zsh instance)
 
+resetws() {
+  rm -rf /workspace/*
+  mkdir -p /workspace/{outputs,downloads,uploads}
+  echo "[+] Workspace wiped and reset"
+}
+
+listen() {
+  local PORT=""
+  local USE_PWNCAT=false
+
+  # Parse arguments
+  for arg in "$@"; do
+    case "$arg" in
+      --linux)
+        USE_PWNCAT=true
+        ;;
+      *)
+        PORT="$arg"
+        ;;
+    esac
+  done
+
+  if [[ -z "$PORT" ]]; then
+    echo "Usage: listen <port> [--linux]"
+    return 1
+  fi
+
+  if $USE_PWNCAT; then
+    echo "[+] Listening on 0.0.0.0:$PORT with pwncat"
+    pwncat-cs -lp "$PORT" 0.0.0.0
+  else
+    echo "[+] Listening on 0.0.0.0:$PORT with netcat"
+    nc -lvnp "$PORT"
+  fi
+}
