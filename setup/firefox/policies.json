@@ -145,9 +145,9 @@
                 "install_url": "https://addons.mozilla.org/firefox/downloads/latest/firefox-hackbar/latest.xpi"
             },
 
-            "{59a5e07a-5406-401e-886c-6cc8dbf8260c}": {
+            "{9efa0613-820d-4f74-8876-11ac0c17244e}": {
                 "installation_mode": "force_installed",
-                "install_url": "https://addons.mozilla.org/firefox/downloads/latest/request-interceptor/latest.xpi"
+                "install_url": "https://addons.mozilla.org/firefox/downloads/file/4464986/request_interceptor-3.0.xpi"
             }
         },
         "UserMessaging": {
