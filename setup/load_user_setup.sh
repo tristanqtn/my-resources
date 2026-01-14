@@ -47,4 +47,9 @@ xhost local:
 # Perform a system update
 sudo apt update
 
-mkdir -p /workspace/{outputs,downloads,uploads}
+# Installations
+pipx install aliasr
+pipx install devious-winrm
+
+# Workspace setup
+mkdir -p /workspace/{outputs,downloads,uploads,tools}
