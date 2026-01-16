@@ -4,7 +4,7 @@
 
 resetws() {
   rm -rf /workspace/*
-  mkdir -p /workspace/{outputs,downloads,uploads}
+  mkdir -p /workspace/{outputs,downloads,uploads,tools}
   echo "[+] Workspace wiped and reset"
 }
 

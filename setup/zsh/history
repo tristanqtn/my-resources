@@ -1,2 +1,4 @@
 # Config file dedicated to the user's personal history shared between all exegol containers
-
+resetws
+listen 8888
+listen 9999 --linux
